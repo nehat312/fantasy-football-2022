@@ -1,2 +1,4 @@
-# REIT-comps
-Real Estate Investment Trusts (REITs) -- Public Market Trading Comparables
+# 2022 NFL FANTASY FOOTBALL DRAFT KIT
+* OVERALL RANKINGS
+* POSITIONAL RANKINGS
+* LEAGUE OVERVIEW
