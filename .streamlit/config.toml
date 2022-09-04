@@ -1,17 +1,22 @@
 [theme]
 
 ## FOOTBALL ##
-primaryColor="#663831"
-backgroundColor="#586D3D"
-secondaryBackgroundColor="#CBB67C"
+primaryColor="#FFDF00"
+backgroundColor="#00680A"
+secondaryBackgroundColor="#FFDF00" #"#CBB67C"
 textColor="#DADADA"
 font="sans serif"
 
-#football-brown: "#663831"
 
-
-#riverbank "#00680A"
-#grass-green "#009A17"
+# football-white: "#DADADA"
+# football-brown: "#663831"
+# football-gold: "#CBB67C"
+# reit-gold: "#FFDF00"
+# white-silver: '#EEFCF7'
+# white-silver: '#E9EDED'
+# riverbank "#00680A"
+# grass-green "#009A17"
+# ok-dark-green: "#586D3D"
 
 ## SPACE THEME ##
 # primaryColor="#66FCF1"
