@@ -45,16 +45,28 @@ wr_rankings = pd.read_csv(wr_path, header=0, index_col='RK') #, header=0, index_
 te_rankings = pd.read_csv(te_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
 
 # qb_rankings.sort_values(by='disc_year', inplace=True)
-#%%
-print(qb_rankings.info())
-print(qb_rankings.columns)
+
+# print(qb_rankings.info())
+# print(qb_rankings.columns)
 
 
 #%%
-gen_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE', 'PPL TEAM', 'SALARY', 'TAG',
-       '2022 PROJ', ''21 TTL', 'BEST', 'WORST', 'AVG']
+all_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
+            'PPL TEAM', 'SALARY', 'TAG',
+            '2022 PROJ', '2021 TTL',
+            'BEST', 'WORST', 'AVG']
 
-#%%
+output_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
+               '2022 PROJ', '2021 TTL',
+               'BEST', 'WORST', 'AVG']
+
+overall_rankings = overall_rankings[output_cols]
+qb_rankings = qb_rankings[output_cols]
+rb_rankings = rb_rankings[output_cols]
+wr_rankings = wr_rankings[output_cols]
+te_rankings = te_rankings[output_cols]
+
+
 ## IMAGE IMPORT ##
 # jwst_tele_img_1 = Image.open('images/JWST-2.jpg')
 
@@ -77,12 +89,11 @@ Dense = px.colors.sequential.dense
 ## VISUALIATION LABELS ##
 
 # chart_labels = {'pl_name':'PL. NAME',
-#
 #                 }
 
+
+
 ## FEATURE VARIABLES ##
-
-
 
 
 ## VISUALIZATIONS ##
@@ -182,9 +193,11 @@ with tab_3:
 
 with tab_4:
     st.subheader('WIDE RECEIVER [WR]')
+    st.dataframe(wr_rankings)
 
 with tab_5:
     st.subheader('TIGHT END [TE]')
+    st.dataframe(te_rankings)
 
 with tab_6:
     st.subheader('KICKER [K]')
