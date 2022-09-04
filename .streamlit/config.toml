@@ -1,11 +1,13 @@
 [theme]
 
 ## FOOTBALL ##
-primaryColor="#DADADA"
+primaryColor="#663831"
 backgroundColor="#586D3D"
 secondaryBackgroundColor="#CBB67C"
 textColor="#DADADA"
 font="sans serif"
+
+#football-brown: "#663831"
 
 
 #riverbank "#00680A"
