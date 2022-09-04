@@ -1,11 +1,15 @@
 [theme]
 
-## GEMSTONES ##
-primaryColor="#5F8C95" ##5F8C95
-backgroundColor="#D4C25E" ##FFDF00 #00bfbf
-secondaryBackgroundColor="#1B2F33"
-textColor="#EBEDE9" #46D8BF
+## FOOTBALL ##
+primaryColor="#009A17"
+backgroundColor="#009A17"
+secondaryBackgroundColor="#CBB67C"
+textColor="#DADADA"
 font="sans serif"
+
+
+#riverbank "#00680A"
+#grass-green "#009A17"
 
 ## SPACE THEME ##
 # primaryColor="#66FCF1"
@@ -39,17 +43,14 @@ font="sans serif"
 #space-gray:"#282828"
 #space-gray2: "#2C3531"
 
+#grass-green1: "#009A17"
+
 #alien-green-OG: "#EDF5E1"
 #alien-green2: "#2BDB6B"
 #bright-teal: "#66FCF1"
 
 
-## TBU ##
-# primaryColor="#"
-# backgroundColor="#"
-# secondaryBackgroundColor="#"
-# textColor="#"
-# font="#"
+
 
 ## TBU ##
 # primaryColor="#"
