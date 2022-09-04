@@ -25,23 +25,36 @@ from PIL import Image
 # import scipy.stats as stats
 # import statistics
 
+#%%
 ## DIRECTORY CONFIGURATION ##
-abs_path = r'https://raw.githubusercontent.com/nehat312/fantasy-football-2022/main'
-overall_path = abs_path + '/data/2022-FF-OVERALL.csv'
-qb_path = abs_path + '/data/2022-FF-QB.csv'
-rb_path = abs_path + '/data/2022-FF-RB.csv'
-wr_path = abs_path + '/data/2022-FF-WR.csv'
-te_path = abs_path + '/data/2022-FF-TE.csv'
+current_path = r'https://raw.githubusercontent.com/nehat312/fantasy-football-2022/main'
+basic_path = 'https://raw.githubusercontent.com/nehat312/fantasy-football-2022/main'
+overall_path = current_path + '/data/2022-FF-Overall.csv'
+qb_path = current_path + '/data/2022-FF-QB.csv'
+rb_path = current_path + '/data/2022-FF-RB.csv'
+wr_path = current_path + '/data/2022-FF-WR.csv'
+te_path = current_path + '/data/2022-FF-TE.csv'
+
+#%%
 
 ## DATA IMPORT ##
-overall_rankings = pd.read_csv(overall_path, header=0, index_col='loc_rowid') #, header=0, index_col='pl_name'#,
-qb_rankings = pd.read_csv(qb_path, header=0, index_col='loc_rowid') #, header=0, index_col='pl_name'#,
-rb_rankings = pd.read_csv(rb_path, header=0, index_col='loc_rowid') #, header=0, index_col='pl_name'#,
-wr_rankings = pd.read_csv(rb_path, header=0, index_col='loc_rowid') #, header=0, index_col='pl_name'#,
-te_rankings = pd.read_csv(rb_path, header=0, index_col='loc_rowid') #, header=0, index_col='pl_name'#,
+overall_rankings = pd.read_csv(overall_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
+qb_rankings = pd.read_csv(qb_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
+rb_rankings = pd.read_csv(rb_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
+wr_rankings = pd.read_csv(wr_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
+te_rankings = pd.read_csv(te_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
 
 # qb_rankings.sort_values(by='disc_year', inplace=True)
+#%%
+print(qb_rankings.info())
+print(qb_rankings.columns)
 
+
+#%%
+gen_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE', 'PPL TEAM', 'SALARY', 'TAG',
+       '2022 PROJ', ''21 TTL', 'BEST', 'WORST', 'AVG']
+
+#%%
 ## IMAGE IMPORT ##
 # jwst_tele_img_1 = Image.open('images/JWST-2.jpg')
 
@@ -75,7 +88,7 @@ Dense = px.colors.sequential.dense
 ## VISUALIZATIONS ##
 
 
-
+#%%
 #####################
 ### STREAMLIT APP ###
 #####################
