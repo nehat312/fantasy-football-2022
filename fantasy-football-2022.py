@@ -135,11 +135,11 @@ df_styles = [dict(selector="th", props=th_props),
              dict(selector="td", props=td_props)]
 
 
-col_format_dict = {'BYE': "{:.}",
+col_format_dict = {'BYE': "{:.1}",
                    '2022 PROJ': "{:.1}",
                    '2021 TTL': "{:,}",
-                   'BEST': "{:.}",
-                   'WORST': "{:.}",
+                   'BEST': "{:.1}",
+                   'WORST': "{:.1}",
                    'AVG': "{:,}",
                    # 'SALARY': "${:.2}", #"${:,}"
                    # #: "{:.1%}", #:"{:.1}x",
