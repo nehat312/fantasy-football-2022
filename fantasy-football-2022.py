@@ -34,21 +34,20 @@ qb_path = current_path + '/data/2022-FF-QB.csv'
 rb_path = current_path + '/data/2022-FF-RB.csv'
 wr_path = current_path + '/data/2022-FF-WR.csv'
 te_path = current_path + '/data/2022-FF-TE.csv'
+idp_path = current_path + '/data/2022-FF-IDP.csv'
 
 #%%
 
 ## DATA IMPORT ##
-overall_rankings = pd.read_csv(overall_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
-qb_rankings = pd.read_csv(qb_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
-rb_rankings = pd.read_csv(rb_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
-wr_rankings = pd.read_csv(wr_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
-te_rankings = pd.read_csv(te_path, header=0, index_col='RK') #, header=0, index_col='pl_name'#,
-
-# qb_rankings.sort_values(by='disc_year', inplace=True)
+overall_rankings = pd.read_csv(overall_path, header=0, index_col='RK')
+qb_rankings = pd.read_csv(qb_path, header=0, index_col='RK')
+rb_rankings = pd.read_csv(rb_path, header=0, index_col='RK')
+wr_rankings = pd.read_csv(wr_path, header=0, index_col='RK')
+te_rankings = pd.read_csv(te_path, header=0, index_col='RK')
+idp_rankings = pd.read_csv(idp_path, header=0, index_col='RK')
 
 # print(qb_rankings.info())
 # print(qb_rankings.columns)
-
 
 #%%
 all_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
@@ -65,6 +64,7 @@ qb_rankings = qb_rankings[output_cols]
 rb_rankings = rb_rankings[output_cols]
 wr_rankings = wr_rankings[output_cols]
 te_rankings = te_rankings[output_cols]
+idp_rankings = idp_rankings[output_cols]
 
 
 ## IMAGE IMPORT ##
@@ -92,7 +92,6 @@ Dense = px.colors.sequential.dense
 #                 }
 
 
-
 ## FEATURE VARIABLES ##
 
 
@@ -116,9 +115,48 @@ hide_menu_style = """
 
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
+## CSS LAYOUT CUSTOMIZATION ##
+
+th_props = [('font-size', '12px'),
+            ('text-align', 'center'),
+            ('font-weight', 'bold'),
+            ('color', '#EBEDE9'), #6d6d6d #29609C
+            ('background-color', '#29609C') #f7f7f9
+            ]
+
+td_props = [('font-size', '12px'),
+            # ('text-align', 'center'),
+            # ('font-weight', 'bold'),
+            # ('color', '#EBEDE9'), #6d6d6d #29609C
+            # ('background-color', '#29609C') #f7f7f9
+            ]
+
+df_styles = [dict(selector="th", props=th_props),
+             dict(selector="td", props=td_props)]
+
+
+col_format_dict = {'profitMargin': "{:.1%}", 'payoutRatio': "{:.1%}", 'dividendYield': "{:.1%}",
+                   'dividendsPerBasicCommonShare': "${:.2}", #'Price_Actual': "${:.2}",
+                   'priceToEarningsRatio': "{:.1}x", 'priceToBookValue': "{:.1}x",
+                   'enterpriseValueOverEBIT': "{:.1}x", 'enterpriseValueOverEBITDA': "{:.1}x",
+                   'shares': "{:,}",
+                   'marketCapitalization': "${:,}",
+                   'earningBeforeInterestTaxes': "${:,}",
+                   'earningsBeforeInterestTaxesDepreciationAmortization': "${:,}",
+                   'assets': "${:,}", 'debt': "${:,}", 'totalLiabilities': "${:,}",
+                   'cashAndEquivalents': "${:,}",
+                   'netIncome': "${:,}", 'netIncomeToNonControllingInterests': "${:,}",
+                   'enterpriseValue': "${:,}", 'netCashFlow': "${:,}",
+                   'capitalExpenditure': "${:,}", 'netCashFlowBusinessAcquisitionsDisposals': "${:,}",
+                   'investedCapital': "${:,}", 'investments': "${:,}",
+                   'propertyPlantEquipmentNet': "${:,}", 'tangibleAssetValue': "${:,}",
+                   }
+
+
 
 ## SIDEBAR ##
 # st.sidebar.xyz
+
 
 
 ## HEADER ##
@@ -170,6 +208,8 @@ st.title('2022 FANTASY FOOTBALL DRAFT KIT')
 #     exo_submit = st.form_submit_button('EXO-STATS')
 #     if exo_submit:
         # display_planet_stats(exo_input)
+
+
 
 
 ## SECTOR TABS ##
