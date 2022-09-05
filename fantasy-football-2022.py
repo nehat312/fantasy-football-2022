@@ -135,21 +135,14 @@ df_styles = [dict(selector="th", props=th_props),
              dict(selector="td", props=td_props)]
 
 
-col_format_dict = {'profitMargin': "{:.1%}", 'payoutRatio': "{:.1%}", 'dividendYield': "{:.1%}",
-                   'dividendsPerBasicCommonShare': "${:.2}", #'Price_Actual': "${:.2}",
-                   'priceToEarningsRatio': "{:.1}x", 'priceToBookValue': "{:.1}x",
-                   'enterpriseValueOverEBIT': "{:.1}x", 'enterpriseValueOverEBITDA': "{:.1}x",
-                   'shares': "{:,}",
-                   'marketCapitalization': "${:,}",
-                   'earningBeforeInterestTaxes': "${:,}",
-                   'earningsBeforeInterestTaxesDepreciationAmortization': "${:,}",
-                   'assets': "${:,}", 'debt': "${:,}", 'totalLiabilities': "${:,}",
-                   'cashAndEquivalents': "${:,}",
-                   'netIncome': "${:,}", 'netIncomeToNonControllingInterests': "${:,}",
-                   'enterpriseValue': "${:,}", 'netCashFlow': "${:,}",
-                   'capitalExpenditure': "${:,}", 'netCashFlowBusinessAcquisitionsDisposals': "${:,}",
-                   'investedCapital': "${:,}", 'investments': "${:,}",
-                   'propertyPlantEquipmentNet': "${:,}", 'tangibleAssetValue': "${:,}",
+col_format_dict = {'BYE': "{:,}",
+                   '2022 PROJ': "{:,}",
+                   '2021 TTL': "{:,}",
+                   'BEST': "{:,}",
+                   'WORST': "{:,}",
+                   'AVG': "{:,}",
+                   # 'SALARY': "${:.2}", #"${:,}"
+                   # #: "{:.1%}", #:"{:.1}x",
                    }
 
 
@@ -221,29 +214,30 @@ with tab_0:
 
 with tab_1:
     st.subheader('OVERALL')
-    st.dataframe(overall_rankings)
+    st.dataframe(overall_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_2:
     st.subheader('QUARTERBACK [QB]')
-    st.dataframe(qb_rankings)
+    st.dataframe(qb_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_3:
     st.subheader('RUNNINGBACK [RB]')
-    st.dataframe(rb_rankings)
+    st.dataframe(rb_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_4:
     st.subheader('WIDE RECEIVER [WR]')
-    st.dataframe(wr_rankings)
+    st.dataframe(wr_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_5:
     st.subheader('TIGHT END [TE]')
-    st.dataframe(te_rankings)
+    st.dataframe(te_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_6:
     st.subheader('KICKER [K]')
 
 with tab_7:
     st.subheader('DEFENSIVE PLAYERS [IDP]')
+    st.dataframe(idp_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_8:
     st.subheader('DEFENSE / SPECIAL TEAMS [DST]')
