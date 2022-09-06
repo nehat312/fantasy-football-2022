@@ -168,13 +168,13 @@ col_format_dict = {'BYE': "{:,}",
 ## SIDEBAR ##
 # st.sidebar.xyz
 
-sidebar_header = st.sidebar.subheader('VISUALIZATION TIMEFRAME:')
-sidebar_start = st.sidebar.date_input('START DATE', before)
-sidebar_end = st.sidebar.date_input('END DATE', today)
-if sidebar_start < sidebar_end:
-    st.sidebar.success('START DATE: `%s`\n\nEND DATE: `%s`' % (sidebar_start, sidebar_end))
-else:
-    st.sidebar.error('ERROR: END DATE BEFORE START DATE')
+# sidebar_header = st.sidebar.subheader('VISUALIZATION TIMEFRAME:')
+# sidebar_start = st.sidebar.date_input('START DATE', before)
+# sidebar_end = st.sidebar.date_input('END DATE', today)
+# if sidebar_start < sidebar_end:
+#     st.sidebar.success('START DATE: `%s`\n\nEND DATE: `%s`' % (sidebar_start, sidebar_end))
+# else:
+#     st.sidebar.error('ERROR: END DATE BEFORE START DATE')
 
 ## HEADER ##
 st.container()
