@@ -37,6 +37,8 @@ rb_path = current_path + '/data/2022-FF-RB.csv'
 wr_path = current_path + '/data/2022-FF-WR.csv'
 te_path = current_path + '/data/2022-FF-TE.csv'
 idp_path = current_path + '/data/2022-FF-IDP.csv'
+k_path = current_path + '/data/2022-FF-K.csv'
+# dst_path = current_path + '/data/2022-FF-DST.csv'
 
 #%%
 ## TIME INTERVALS ##
@@ -54,6 +56,8 @@ rb_rankings = pd.read_csv(rb_path, header=0, index_col='RK')
 wr_rankings = pd.read_csv(wr_path, header=0, index_col='RK')
 te_rankings = pd.read_csv(te_path, header=0, index_col='RK')
 idp_rankings = pd.read_csv(idp_path, header=0, index_col='RK')
+k_rankings = pd.read_csv(k_path, header=0, index_col='RK')
+# dst_rankings = pd.read_csv(dst_path, header=0, index_col='RK')
 
 # print(qb_rankings.info())
 # print(qb_rankings.columns)
@@ -68,12 +72,14 @@ output_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
                '2022 PROJ', '2021 TTL',
                'BEST', 'WORST', 'AVG']
 
+overview_dash = nfl_overview
 overall_rankings = overall_rankings[output_cols]
 qb_rankings = qb_rankings[output_cols]
 rb_rankings = rb_rankings[output_cols]
 wr_rankings = wr_rankings[output_cols]
 te_rankings = te_rankings[output_cols]
 idp_rankings = idp_rankings[output_cols]
+k_rankings = k_rankings[output_cols]
 
 
 ## IMAGE IMPORT ##
@@ -154,8 +160,6 @@ col_format_dict = {'BYE': "{:,}",
                    # #: "{:.1%}", #:"{:.1}x",
                    }
 
-
-
 ## SIDEBAR ##
 # st.sidebar.xyz
 
@@ -225,7 +229,7 @@ tab_0, tab_1, tab_2, tab_3, tab_4, tab_5, tab_6, tab_7, tab_8 = st.tabs(['NFL', 
 
 with tab_0:
     st.subheader('NFL OVERVIEW')
-
+    st.dataframe(overview_dash.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_1:
     st.subheader('OVERALL')
@@ -249,6 +253,7 @@ with tab_5:
 
 with tab_6:
     st.subheader('KICKER [K]')
+    st.dataframe(k_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_7:
     st.subheader('DEFENSIVE PLAYERS [IDP]')
