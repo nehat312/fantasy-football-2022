@@ -11,6 +11,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
 from PIL import Image
+import datetime
 
 # import matplotlib.pyplot as plt
 # import seaborn as sns
@@ -29,6 +30,7 @@ from PIL import Image
 ## DIRECTORY CONFIGURATION ##
 current_path = r'https://raw.githubusercontent.com/nehat312/fantasy-football-2022/main'
 basic_path = 'https://raw.githubusercontent.com/nehat312/fantasy-football-2022/main'
+overview_path = current_path + '/data/2022-FF-Overview.csv'
 overall_path = current_path + '/data/2022-FF-Overall.csv'
 qb_path = current_path + '/data/2022-FF-QB.csv'
 rb_path = current_path + '/data/2022-FF-RB.csv'
@@ -37,8 +39,15 @@ te_path = current_path + '/data/2022-FF-TE.csv'
 idp_path = current_path + '/data/2022-FF-IDP.csv'
 
 #%%
+## TIME INTERVALS ##
+today = datetime.date.today()
+before = today - datetime.timedelta(days=1095) #700
+start_date = '2000-01-01'
+end_date = today
 
+#%%
 ## DATA IMPORT ##
+nfl_overview = pd.read_csv(overview_path, header=0, index_col='RK')
 overall_rankings = pd.read_csv(overall_path, header=0, index_col='RK')
 qb_rankings = pd.read_csv(qb_path, header=0, index_col='RK')
 rb_rankings = pd.read_csv(rb_path, header=0, index_col='RK')
@@ -150,7 +159,13 @@ col_format_dict = {'BYE': "{:,}",
 ## SIDEBAR ##
 # st.sidebar.xyz
 
-
+sidebar_header = st.sidebar.subheader('VISUALIZATION TIMEFRAME:')
+sidebar_start = st.sidebar.date_input('START DATE', before)
+sidebar_end = st.sidebar.date_input('END DATE', today)
+if sidebar_start < sidebar_end:
+    st.sidebar.success('START DATE: `%s`\n\nEND DATE: `%s`' % (sidebar_start, sidebar_end))
+else:
+    st.sidebar.error('ERROR: END DATE BEFORE START DATE')
 
 ## HEADER ##
 st.container()
