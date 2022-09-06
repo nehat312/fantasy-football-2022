@@ -37,7 +37,7 @@ rb_path = current_path + '/data/2022-FF-RB.csv'
 wr_path = current_path + '/data/2022-FF-WR.csv'
 te_path = current_path + '/data/2022-FF-TE.csv'
 idp_path = current_path + '/data/2022-FF-IDP.csv'
-k_path = current_path + '/data/2022-FF-K.csv'
+# k_path = current_path + '/data/2022-FF-K.csv'
 # dst_path = current_path + '/data/2022-FF-DST.csv'
 
 #%%
@@ -56,7 +56,7 @@ rb_rankings = pd.read_csv(rb_path, header=0, index_col='RK')
 wr_rankings = pd.read_csv(wr_path, header=0, index_col='RK')
 te_rankings = pd.read_csv(te_path, header=0, index_col='RK')
 idp_rankings = pd.read_csv(idp_path, header=0, index_col='RK')
-k_rankings = pd.read_csv(k_path, header=0, index_col='RK')
+# k_rankings = pd.read_csv(k_path, header=0, index_col='RK')
 # dst_rankings = pd.read_csv(dst_path, header=0, index_col='RK')
 
 # print(qb_rankings.info())
@@ -79,7 +79,7 @@ rb_rankings = rb_rankings[output_cols]
 wr_rankings = wr_rankings[output_cols]
 te_rankings = te_rankings[output_cols]
 idp_rankings = idp_rankings[output_cols]
-k_rankings = k_rankings[output_cols]
+# k_rankings = k_rankings[output_cols]
 
 
 ## IMAGE IMPORT ##
@@ -253,7 +253,7 @@ with tab_5:
 
 with tab_6:
     st.subheader('KICKER [K]')
-    st.dataframe(k_rankings.style.format(col_format_dict).set_table_styles(df_styles))
+    # st.dataframe(k_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_7:
     st.subheader('DEFENSIVE PLAYERS [IDP]')
