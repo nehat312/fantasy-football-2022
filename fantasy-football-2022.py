@@ -81,7 +81,7 @@ SEA_logo = Image.open('images/SEA-Seahawks.png')
 SFO_logo = Image.open('images/SFO-49ers.png')
 
 NOS_logo = Image.open('images/NOS-Saints.png')
-TBB_logo = Image.open('images/TBB-Buccaneers-2.png')
+TBB_logo = Image.open('images/TBB-Buccaneers.png')
 ATL_logo = Image.open('images/ATL-Falcons.png')
 CAR_logo = Image.open('images/CAR-Panthers.png')
 
