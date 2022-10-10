@@ -161,7 +161,7 @@ Dense = px.colors.sequential.dense
 #####################
 
 ## CONFIGURATION ##
-st.set_page_config(page_title='2022 FANTASY FOOTBALL DRAFT KIT', layout='wide', initial_sidebar_state='auto') #, page_icon=":smirk:"
+st.set_page_config(page_title='FANTASY FOOTBALL DRAFT KIT', layout='wide', initial_sidebar_state='auto') #, page_icon=":smirk:"
 
 hide_menu_style = """
         <style>
@@ -221,7 +221,7 @@ col_format_dict = {'BYE': "{:,}",
 
 ## HEADER ##
 st.container()
-st.title('2022 FANTASY FOOTBALL DRAFT KIT')
+st.title('2022-2023 NFL FANTASY FOOTBALL DRAFT KIT')
 
 ## LEAGUE LOGOS ##
 afc_col_1, nfl_col_2, nfc_col_3 = st.columns(3)
