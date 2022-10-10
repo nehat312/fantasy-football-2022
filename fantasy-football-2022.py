@@ -319,13 +319,13 @@ nfc_col_3.image(NFC_logo, width=300) # caption='NATIONAL FOOTBALL LEAGUE'
 
 ## EXTERNAL LINKS ##
 github_link = '[GITHUB REPOSITORY](https://github.com/nehat312/exoplanet-explorer/)'
-tbu_link1 = '[TBU](<TBU>)'
+tbu_link1 = '[NFL](https://www.nfl.com/)'
 tbu_link2 = '[TBU](<TBU>)'
 
-link_col_1, link_col_2, link_col_3 = st.columns(3)
+link_col_1, link_col_2 = st.columns(2) #, link_col_3
 ext_link_1 = link_col_1.markdown(github_link, unsafe_allow_html=True)
 ext_link_2 = link_col_2.markdown(tbu_link1, unsafe_allow_html=True)
-ext_link_3 = link_col_3.markdown(tbu_link2, unsafe_allow_html=True)
+# ext_link_3 = link_col_3.markdown(tbu_link2, unsafe_allow_html=True)
 
 
 ## SCRIPT TERMINATION ##
