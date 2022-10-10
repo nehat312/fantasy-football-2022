@@ -195,9 +195,9 @@ ext_link_2 = link_col_2.markdown(tbu_link1, unsafe_allow_html=True)
 ext_link_3 = link_col_3.markdown(tbu_link2, unsafe_allow_html=True)
 
 ## LEAGUE LOGOS ##
-nfl_col_1, afc_col_2, nfc_col_3 = st.columns(3)
-nfl_col_1.image(NFL_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
-afc_col_2.image(AFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
+afc_col_1, nfl_col_2, nfc_col_3 = st.columns(3)
+afc_col_1.image(AFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
+nfl_col_2.image(NFL_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 nfc_col_3.image(NFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 
 st.title('2022 FANTASY FOOTBALL DRAFT KIT')
@@ -240,31 +240,31 @@ with tab_0:
     st.dataframe(overview_dash.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_1:
-    st.subheader('OVERALL')
+    st.subheader('OVERALL RANKINGS')
     st.dataframe(overall_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_2:
-    st.subheader('QUARTERBACK [QB]')
+    st.subheader('QUARTERBACK [QB] RANKINGS')
     st.dataframe(qb_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_3:
-    st.subheader('RUNNINGBACK [RB]')
+    st.subheader('RUNNINGBACK [RB] RANKINGS')
     st.dataframe(rb_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_4:
-    st.subheader('WIDE RECEIVER [WR]')
+    st.subheader('WIDE RECEIVER [WR] RANKINGS')
     st.dataframe(wr_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_5:
-    st.subheader('TIGHT END [TE]')
+    st.subheader('TIGHT END [TE] RANKINGS')
     st.dataframe(te_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_6:
-    st.subheader('KICKER [K]')
+    st.subheader('KICKER [K] RANKINGS')
     # st.dataframe(k_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_7:
-    st.subheader('DEFENSIVE PLAYERS [IDP]')
+    st.subheader('DEFENSIVE PLAYERS [IDP] RANKINGS')
     st.dataframe(idp_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_8:
