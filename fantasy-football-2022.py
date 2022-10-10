@@ -59,29 +59,7 @@ idp_rankings = pd.read_csv(idp_path, header=0, index_col='RK')
 k_rankings = pd.read_csv(k_path, header=0, index_col='RK')
 # dst_rankings = pd.read_csv(dst_path, header=0, index_col='RK')
 
-# print(qb_rankings.info())
-# print(qb_rankings.columns)
-
 #%%
-all_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
-            'PPL TEAM', 'SALARY', 'TAG',
-            '2022 PROJ', '2021 TTL',
-            'BEST', 'WORST', 'AVG']
-
-output_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
-               '2021 TTL', #'2022 PROJ',
-               'BEST', 'WORST', 'AVG']
-
-overview_dash = nfl_overview
-overall_rankings = overall_rankings[output_cols]
-qb_rankings = qb_rankings[output_cols]
-rb_rankings = rb_rankings[output_cols]
-wr_rankings = wr_rankings[output_cols]
-te_rankings = te_rankings[output_cols]
-idp_rankings = idp_rankings[output_cols]
-k_rankings = k_rankings[output_cols]
-
-
 ## IMAGE IMPORT ##
 NFL_logo = Image.open('images/NFL-Logo.png')
 AFC_logo = Image.open('images/AFC-Logo.png')
@@ -103,7 +81,7 @@ SEA_logo = Image.open('images/SEA-Seahawks.png')
 SFO_logo = Image.open('images/SFO-49ers.png')
 
 NOS_logo = Image.open('images/NOS-Saints.png')
-TBB_logo = Image.open('images/TBB-Buccaneers.png')
+TBB_logo = Image.open('images/TBB-Buccaneers-2.png')
 ATL_logo = Image.open('images/ATL-Falcons.png')
 CAR_logo = Image.open('images/CAR-Panthers.png')
 
@@ -127,6 +105,26 @@ LVR_logo = Image.open('images/LVR-Raiders.png')
 LAC_logo = Image.open('images/LAC-Chargers.png')
 DEN_logo = Image.open('images/DEN-Broncos.png')
 
+
+#%%
+all_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
+            'PPL TEAM', 'SALARY', 'TAG',
+            '2022 PROJ', '2021 TTL',
+            'BEST', 'WORST', 'AVG']
+
+output_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
+               '2021 TTL', #'2022 PROJ',
+               'BEST', 'WORST', 'AVG']
+
+overview_dash = nfl_overview
+overall_rankings = overall_rankings[output_cols]
+qb_rankings = qb_rankings[output_cols]
+rb_rankings = rb_rankings[output_cols]
+wr_rankings = wr_rankings[output_cols]
+te_rankings = te_rankings[output_cols]
+idp_rankings = idp_rankings[output_cols]
+k_rankings = k_rankings[output_cols]
+
 ## FORMAT / STYLE ##
 
 ## COLOR SCALES ##
@@ -143,11 +141,10 @@ Ice = px.colors.sequential.ice
 Ice_r = px.colors.sequential.ice_r
 Dense = px.colors.sequential.dense
 
-## VISUALIATION LABELS ##
+## VISUALIZATION LABELS ##
 
 # chart_labels = {'pl_name':'PL. NAME',
 #                 }
-
 
 ## FEATURE VARIABLES ##
 
