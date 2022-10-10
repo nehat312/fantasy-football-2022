@@ -69,7 +69,7 @@ all_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
             'BEST', 'WORST', 'AVG']
 
 output_cols = ['CODE', 'PLAYER', 'TEAM', 'BYE',
-               '2021 TTL', #'2022 PROJ', 
+               '2021 TTL', #'2022 PROJ',
                'BEST', 'WORST', 'AVG']
 
 overview_dash = nfl_overview
@@ -298,7 +298,7 @@ with tab_5:
 
 with tab_6:
     st.subheader('KICKER [K] RANKINGS')
-    # st.dataframe(k_rankings.style.format(col_format_dict).set_table_styles(df_styles))
+    st.dataframe(k_rankings.style.format(col_format_dict).set_table_styles(df_styles))
 
 with tab_7:
     st.subheader('DEFENSIVE PLAYERS [IDP] RANKINGS')
