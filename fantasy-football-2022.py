@@ -66,7 +66,7 @@ AFC_logo = Image.open('images/AFC-Logo.png')
 NFC_logo = Image.open('images/NFC-Logo.png')
 
 DAL_logo = Image.open('images/DAL-Cowboys.png')
-PHI_logo = Image.open('images/PHI-Eagles.png')
+PHI_logo = Image.open('images/PHI-Eagles-2.png')
 NYG_logo = Image.open('images/NYG-Giants.png')
 WAS_logo = Image.open('images/WAS-Commanders.png')
 
@@ -77,7 +77,7 @@ CHI_logo = Image.open('images/CHI-Bears.png')
 
 LAR_logo = Image.open('images/LAR-Rams.png')
 ARI_logo = Image.open('images/ARI-Cardinals.png')
-SEA_logo = Image.open('images/SEA-Seahawks.png')
+SEA_logo = Image.open('images/SEA-Seahawks-2.png')
 SFO_logo = Image.open('images/SFO-49ers.png')
 
 NOS_logo = Image.open('images/NOS-Saints.png')
