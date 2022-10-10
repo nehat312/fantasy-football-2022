@@ -87,7 +87,45 @@ NFL_logo = Image.open('images/NFL-Logo.png')
 AFC_logo = Image.open('images/AFC-Logo.png')
 NFC_logo = Image.open('images/NFC-Logo.png')
 
+DAL_logo = Image.open('images/DAL-Cowboys.png')
+PHI_logo = Image.open('images/PHI-Eagles.png')
+NYG_logo = Image.open('images/NYG-Giants.png')
 WAS_logo = Image.open('images/WAS-Commanders.png')
+
+MIN_logo = Image.open('images/MIN-Vikings.png')
+GBP_logo = Image.open('images/GBP-Packers.png')
+DET_logo = Image.open('images/DET-Lions.png')
+CHI_logo = Image.open('images/CHI-Bears.png')
+
+LAR_logo = Image.open('images/LAR-Rams.png')
+ARI_logo = Image.open('images/ARI-Cardinals.png')
+SEA_logo = Image.open('images/SEA-Seahawks.png')
+SFO_logo = Image.open('images/SFO-49ers.png')
+
+NOS_logo = Image.open('images/NOS-Saints.png')
+TBB_logo = Image.open('images/TBB-Buccaneers.png')
+ATL_logo = Image.open('images/ATL-Falcons.png')
+CAR_logo = Image.open('images/CAR-Panthers.png')
+
+NEP_logo = Image.open('images/NEP-Patriots.png')
+MIA_logo = Image.open('images/MIA-Dolphins.png')
+BUF_logo = Image.open('images/BUF-Bills.png')
+NYJ_logo = Image.open('images/NYJ-Jets.png')
+
+IND_logo = Image.open('images/IND-Colts.png')
+JAC_logo = Image.open('images/JAC-Jaguars.png')
+HOU_logo = Image.open('images/HOU-Texans.png')
+TEN_logo = Image.open('images/TEN-Titans.png')
+
+CIN_logo = Image.open('images/CIN-Bengals.png')
+PIT_logo = Image.open('images/PIT-Steelers.png')
+BAL_logo = Image.open('images/BAL-Ravens.png')
+CLE_logo = Image.open('images/CLE-Browns.png')
+
+KCC_logo = Image.open('images/KCC-Chiefs.png')
+LVR_logo = Image.open('images/LVR-Raiders.png')
+LAC_logo = Image.open('images/LAC-Chargers.png')
+DEN_logo = Image.open('images/DEN-Broncos.png')
 
 ## FORMAT / STYLE ##
 
@@ -183,17 +221,6 @@ col_format_dict = {'BYE': "{:,}",
 ## HEADER ##
 st.container()
 
-## EXTERNAL LINKS ##
-
-github_link = '[GITHUB REPOSITORY](https://github.com/nehat312/exoplanet-explorer/)'
-tbu_link1 = '[TBU](<TBU>)'
-tbu_link2 = '[TBU](<TBU>)'
-
-link_col_1, link_col_2, link_col_3 = st.columns(3)
-ext_link_1 = link_col_1.markdown(github_link, unsafe_allow_html=True)
-ext_link_2 = link_col_2.markdown(tbu_link1, unsafe_allow_html=True)
-ext_link_3 = link_col_3.markdown(tbu_link2, unsafe_allow_html=True)
-
 ## LEAGUE LOGOS ##
 afc_col_1, nfl_col_2, nfc_col_3 = st.columns(3)
 afc_col_1.image(AFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
@@ -201,36 +228,6 @@ nfl_col_2.image(NFL_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 nfc_col_3.image(NFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 
 st.title('2022 FANTASY FOOTBALL DRAFT KIT')
-
-## 3D SCATTER ##
-# st.plotly_chart(scatter_3d_1, use_container_width=False, sharing="streamlit")
-
-## SELECTION FORM ##
-# exo_drop_cols = ['pl_controv_flag', 'pl_bmassprov', 'ttv_flag',
-#                  'st_temp_eff_k1', 'st_temp_eff_k2',
-#                  'decstr', 'rastr',
-#                  'sy_vmag', 'sy_kmag', 'sy_gaiamag']
-
-
-## EXOPLANET SELECTION ##
-# @st.cache(persist=True, allow_output_mutation=True, suppress_st_warning=True)
-
-# def display_sector_comps(df):
-#     st.dataframe(df.style.set_table_styles(df_styles))
-
-# def display_ticker_stats(ticker_input):
-#     display_ticker_df = ticker_output_df.loc[ticker_output_df['ticker'] == ticker_input]
-#     st.dataframe(display_ticker_df.style.format(col_format_dict).set_table_styles(df_styles))
-
-# with st.form('EXOPLANET SELECTION'):
-#     exoplanet_prompt = st.subheader('SELECT AN EXOPLANET:')
-#     exo_input = st.selectbox('', (exo_planet_list)) #'EXOPLANETS:'
-#     exo_submit = st.form_submit_button('EXO-STATS')
-#     if exo_submit:
-        # display_planet_stats(exo_input)
-
-
-
 
 ## SECTOR TABS ##
 tab_0, tab_1, tab_2, tab_3, tab_4, tab_5, tab_6, tab_7, tab_8 = st.tabs(['NFL', 'OVERALL', 'QB', 'RB', 'WR', 'TE', 'K', 'IDP', 'DST'])
@@ -276,11 +273,63 @@ with tab_8:
 # left_col_1.plotly_chart(exo_matrix_1, use_container_width=False, sharing="streamlit")
 # right_col_1.plotly_chart(star_matrix_1, use_container_width=False, sharing="streamlit")
 
-## GALAXY IMAGES ##
-# img_col_1, img_col_2, img_col_3 = st.columns(3)
-# img_col_1.image(jwst_carina_img_1, caption='CARINA NEBULA (JWST)', width=400)
-# img_col_2.image(jwst_phantom_img_1, caption='PHANTOM GALAXY (JWST)', width=400)
-# img_col_3.image(jwst_infra_img_1, caption='INFRARED PANORAMIC (JWST)', width=400)
+## NFC LOGOS ##
+NFCEast_col_1, NFCEast_col_2, NFCEast_col_3, NFCEast_col_4,\
+NFCWest_col_1, NFCWest_col_2, NFCWest_col_3, NFCWest_col_4, \
+NFCSouth_col_1, NFCSouth_col_2, NFCSouth_col_3, NFCSouth_col_4,\
+NFCNorth_col_1, NFCNorth_col_2, NFCNorth_col_3, NFCNorth_col_4 = st.columns(16)
+NFCEast_col_1.image(WAS_logo, caption='WAS', width=50)
+NFCEast_col_2.image(PHI_logo, caption='PHI', width=50)
+NFCEast_col_3.image(DAL_logo, caption='DAL', width=50)
+NFCEast_col_4.image(NYG_logo, caption='NYG', width=50)
+NFCWest_col_1.image(LAR_logo, caption='LOS ANGELES RAMS', width=50)
+NFCWest_col_2.image(SFO_logo, caption='SAN FRANCISCO 49ERS', width=50)
+NFCWest_col_3.image(SEA_logo, caption='SEATTLE SEAHAWKS', width=50)
+NFCWest_col_4.image(ARI_logo, caption='ARIZONA CARDINALS', width=50)
+NFCSouth_col_1.image(TBB_logo, caption='TAMPA BAY BUCCANEERS', width=50)
+NFCSouth_col_2.image(NOS_logo, caption='NEW ORLEANS SAINTS', width=50)
+NFCSouth_col_3.image(ATL_logo, caption='ATLANTA FALCONS', width=50)
+NFCSouth_col_4.image(CAR_logo, caption='CAROLINA PANTHERS', width=50)
+NFCNorth_col_1.image(GBP_logo, caption='GREEN BAY PACKERS', width=50)
+NFCNorth_col_2.image(MIN_logo, caption='MINNESOTA VIKINGS', width=50)
+NFCNorth_col_3.image(DET_logo, caption='DETROIT LIONS', width=50)
+NFCNorth_col_4.image(CHI_logo, caption='CHICAGO BEARS', width=50)
+
+
+# NFCEast_col_1, NFCEast_col_2, NFCEast_col_3, NFCEast_col_4 = st.columns(4)
+# NFCEast_col_1.image(WAS_logo, caption='WASHINGTON COMMANDERS', width=250)
+# NFCEast_col_2.image(PHI_logo, caption='PHILADELPHIA EAGLES', width=250)
+# NFCEast_col_3.image(DAL_logo, caption='DALLAS COWBOYS', width=250)
+# NFCEast_col_4.image(NYG_logo, caption='NEW YORK GIANTS', width=250)
+#
+# NFCWest_col_1, NFCWest_col_2, NFCWest_col_3, NFCWest_col_4 = st.columns(4)
+# NFCWest_col_1.image(LAR_logo, caption='LOS ANGELES RAMS', width=250)
+# NFCWest_col_2.image(SFO_logo, caption='SAN FRANCISCO 49ERS', width=250)
+# NFCWest_col_3.image(SEA_logo, caption='SEATTLE SEAHAWKS', width=250)
+# NFCWest_col_4.image(ARI_logo, caption='ARIZONA CARDINALS', width=250)
+#
+# NFCSouth_col_1, NFCSouth_col_2, NFCSouth_col_3, NFCSouth_col_4 = st.columns(4)
+# NFCSouth_col_1.image(TBB_logo, caption='TAMPA BAY BUCCANEERS', width=250)
+# NFCSouth_col_2.image(NOS_logo, caption='NEW ORLEANS SAINTS', width=250)
+# NFCSouth_col_3.image(ATL_logo, caption='ATLANTA FALCONS', width=250)
+# NFCSouth_col_4.image(CAR_logo, caption='CAROLINA PANTHERS', width=250)
+#
+# NFCNorth_col_1, NFCNorth_col_2, NFCNorth_col_3, NFCNorth_col_4 = st.columns(4)
+# NFCNorth_col_1.image(GBP_logo, caption='GREEN BAY PACKERS', width=250)
+# NFCNorth_col_2.image(MIN_logo, caption='MINNESOTA VIKINGS', width=250)
+# NFCNorth_col_3.image(DET_logo, caption='DETROIT LIONS', width=250)
+# NFCNorth_col_4.image(CHI_logo, caption='CHICAGO BEARS', width=250)
+
+## EXTERNAL LINKS ##
+
+github_link = '[GITHUB REPOSITORY](https://github.com/nehat312/exoplanet-explorer/)'
+tbu_link1 = '[TBU](<TBU>)'
+tbu_link2 = '[TBU](<TBU>)'
+
+link_col_1, link_col_2, link_col_3 = st.columns(3)
+ext_link_1 = link_col_1.markdown(github_link, unsafe_allow_html=True)
+ext_link_2 = link_col_2.markdown(tbu_link1, unsafe_allow_html=True)
+ext_link_3 = link_col_3.markdown(tbu_link2, unsafe_allow_html=True)
 
 
 ## SCRIPT TERMINATION ##
@@ -296,8 +345,8 @@ st.stop()
 
 ### SCRATCH NOTES ###
 
-
-
+## CACHE MODEL ##
+# @st.cache(persist=True, allow_output_mutation=True, suppress_st_warning=True)
 
 
 
