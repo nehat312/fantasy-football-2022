@@ -221,13 +221,13 @@ col_format_dict = {'BYE': "{:,}",
 
 ## HEADER ##
 st.container()
-st.title('2022-2023 NFL FANTASY FOOTBALL DRAFT KIT')
+st.title('2022-2023 FANTASY FOOTBALL DRAFT KIT')
 
 ## LEAGUE LOGOS ##
 afc_col_1, nfl_col_2, nfc_col_3 = st.columns(3)
-afc_col_1.image(AFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
-nfl_col_2.image(NFL_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
-nfc_col_3.image(NFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
+afc_col_1.image(AFC_logo, width=200) # caption='NATIONAL FOOTBALL LEAGUE'
+nfl_col_2.image(NFL_logo, width=200) # caption='NATIONAL FOOTBALL LEAGUE'
+nfc_col_3.image(NFC_logo, width=200) # caption='NATIONAL FOOTBALL LEAGUE'
 
 
 
@@ -281,44 +281,44 @@ NFCEast_col_1, NFCEast_col_2, NFCEast_col_3, NFCEast_col_4,\
 NFCWest_col_1, NFCWest_col_2, NFCWest_col_3, NFCWest_col_4, \
 NFCSouth_col_1, NFCSouth_col_2, NFCSouth_col_3, NFCSouth_col_4,\
 NFCNorth_col_1, NFCNorth_col_2, NFCNorth_col_3, NFCNorth_col_4 = st.columns(16)
-NFCEast_col_1.image(WAS_logo, caption='WAS', width=50)
-NFCEast_col_2.image(PHI_logo, caption='PHI', width=50)
-NFCEast_col_3.image(DAL_logo, caption='DAL', width=50)
-NFCEast_col_4.image(NYG_logo, caption='NYG', width=50)
-NFCWest_col_1.image(LAR_logo, caption='LAR', width=50)
-NFCWest_col_2.image(SFO_logo, caption='SFO', width=50)
-NFCWest_col_3.image(SEA_logo, caption='SEA', width=50)
-NFCWest_col_4.image(ARI_logo, caption='ARI', width=50)
-NFCSouth_col_1.image(TBB_logo, caption='TBB', width=50)
-NFCSouth_col_2.image(NOS_logo, caption='NOS', width=50)
-NFCSouth_col_3.image(ATL_logo, caption='ATL', width=50)
-NFCSouth_col_4.image(CAR_logo, caption='CAR', width=50)
-NFCNorth_col_1.image(GBP_logo, caption='GBP', width=50)
-NFCNorth_col_2.image(MIN_logo, caption='MIN', width=50)
-NFCNorth_col_3.image(DET_logo, caption='DET', width=50)
-NFCNorth_col_4.image(CHI_logo, caption='CHI', width=50)
+NFCEast_col_1.image(WAS_logo, caption='WAS', width=45)
+NFCEast_col_2.image(PHI_logo, caption='PHI', width=45)
+NFCEast_col_3.image(DAL_logo, caption='DAL', width=45)
+NFCEast_col_4.image(NYG_logo, caption='NYG', width=45)
+NFCWest_col_1.image(LAR_logo, caption='LAR', width=45)
+NFCWest_col_2.image(SFO_logo, caption='SFO', width=45)
+NFCWest_col_3.image(SEA_logo, caption='SEA', width=45)
+NFCWest_col_4.image(ARI_logo, caption='ARI', width=45)
+NFCSouth_col_1.image(TBB_logo, caption='TBB', width=45)
+NFCSouth_col_2.image(NOS_logo, caption='NOS', width=45)
+NFCSouth_col_3.image(ATL_logo, caption='ATL', width=45)
+NFCSouth_col_4.image(CAR_logo, caption='CAR', width=45)
+NFCNorth_col_1.image(GBP_logo, caption='GBP', width=45)
+NFCNorth_col_2.image(MIN_logo, caption='MIN', width=45)
+NFCNorth_col_3.image(DET_logo, caption='DET', width=45)
+NFCNorth_col_4.image(CHI_logo, caption='CHI', width=45)
 
 ## AFC LOGOS ##
 AFCEast_col_1, AFCEast_col_2, AFCEast_col_3, AFCEast_col_4,\
 AFCWest_col_1, AFCWest_col_2, AFCWest_col_3, AFCWest_col_4, \
 AFCSouth_col_1, AFCSouth_col_2, AFCSouth_col_3, AFCSouth_col_4,\
 AFCNorth_col_1, AFCNorth_col_2, AFCNorth_col_3, AFCNorth_col_4 = st.columns(16)
-AFCEast_col_1.image(BUF_logo, caption='BUF', width=50)
-AFCEast_col_2.image(MIA_logo, caption='MIA', width=50)
-AFCEast_col_3.image(NEP_logo, caption='NEP', width=50)
-AFCEast_col_4.image(NYJ_logo, caption='NYJ', width=50)
-AFCWest_col_1.image(KCC_logo, caption='KCC', width=50)
-AFCWest_col_2.image(LAC_logo, caption='LAC', width=50)
-AFCWest_col_3.image(LVR_logo, caption='LVR', width=50)
-AFCWest_col_4.image(DEN_logo, caption='DEN', width=50)
-AFCSouth_col_1.image(IND_logo, caption='IND', width=50)
-AFCSouth_col_2.image(TEN_logo, caption='TEN', width=50)
-AFCSouth_col_3.image(HOU_logo, caption='HOU', width=50)
-AFCSouth_col_4.image(JAC_logo, caption='JAC', width=50)
-AFCNorth_col_1.image(BAL_logo, caption='BAL', width=50)
-AFCNorth_col_2.image(CIN_logo, caption='CIN', width=50)
-AFCNorth_col_3.image(CLE_logo, caption='CLE', width=50)
-AFCNorth_col_4.image(PIT_logo, caption='PIT', width=50)
+AFCEast_col_1.image(BUF_logo, caption='BUF', width=45)
+AFCEast_col_2.image(MIA_logo, caption='MIA', width=45)
+AFCEast_col_3.image(NEP_logo, caption='NEP', width=45)
+AFCEast_col_4.image(NYJ_logo, caption='NYJ', width=45)
+AFCWest_col_1.image(KCC_logo, caption='KCC', width=45)
+AFCWest_col_2.image(LAC_logo, caption='LAC', width=45)
+AFCWest_col_3.image(LVR_logo, caption='LVR', width=45)
+AFCWest_col_4.image(DEN_logo, caption='DEN', width=45)
+AFCSouth_col_1.image(IND_logo, caption='IND', width=45)
+AFCSouth_col_2.image(TEN_logo, caption='TEN', width=45)
+AFCSouth_col_3.image(HOU_logo, caption='HOU', width=45)
+AFCSouth_col_4.image(JAC_logo, caption='JAC', width=45)
+AFCNorth_col_1.image(BAL_logo, caption='BAL', width=45)
+AFCNorth_col_2.image(CIN_logo, caption='CIN', width=45)
+AFCNorth_col_3.image(CLE_logo, caption='CLE', width=45)
+AFCNorth_col_4.image(PIT_logo, caption='PIT', width=45)
 
 
 # NFCEast_col_1, NFCEast_col_2, NFCEast_col_3, NFCEast_col_4 = st.columns(4)
