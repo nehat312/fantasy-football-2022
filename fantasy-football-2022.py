@@ -83,7 +83,11 @@ idp_rankings = idp_rankings[output_cols]
 
 
 ## IMAGE IMPORT ##
-# jwst_tele_img_1 = Image.open('images/JWST-2.jpg')
+NFL_logo = Image.open('images/NFL-Logo.png')
+AFC_logo = Image.open('images/AFC-Logo.png')
+NFC_logo = Image.open('images/NFC-Logo.png')
+
+WAS_logo = Image.open('images/WAS-Commanders.png')
 
 ## FORMAT / STYLE ##
 
@@ -190,14 +194,13 @@ ext_link_1 = link_col_1.markdown(github_link, unsafe_allow_html=True)
 ext_link_2 = link_col_2.markdown(tbu_link1, unsafe_allow_html=True)
 ext_link_3 = link_col_3.markdown(tbu_link2, unsafe_allow_html=True)
 
-st.title('2022 FANTASY FOOTBALL DRAFT KIT')
+## LEAGUE LOGOS ##
+nfl_col_1, afc_col_2, nfc_col_3 = st.columns(3)
+nfl_col_1.image(NFL_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
+afc_col_2.image(AFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
+nfc_col_3.image(NFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 
-## TELESCOPE IMAGES ##
-# qb_col_1, rb_col_2, wr_col_3, te_col_4 = st.columns(4)
-# qb_col_1.image(jwst_tele_img_1, caption='JAMES WEBB SPACE TELESCOPE (JWST)', width=250)
-# rb_col_2.image(jwst_tele_img_1, caption='TRANSITING EXOPLANET SURVEY SATELLITE (TESS)', width=250)
-# wr_col_3.image(jwst_tele_img_1, caption='KEPLER SPACE TELESCOPE', width=250)
-# te_col_4.image(jwst_tele_img_1, caption='HUBBLE SPACE TELESCOPE', width=250)
+st.title('2022 FANTASY FOOTBALL DRAFT KIT')
 
 ## 3D SCATTER ##
 # st.plotly_chart(scatter_3d_1, use_container_width=False, sharing="streamlit")
