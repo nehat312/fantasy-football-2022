@@ -220,6 +220,7 @@ col_format_dict = {'BYE': "{:,}",
 
 ## HEADER ##
 st.container()
+st.title('2022 FANTASY FOOTBALL DRAFT KIT')
 
 ## LEAGUE LOGOS ##
 afc_col_1, nfl_col_2, nfc_col_3 = st.columns(3)
@@ -227,7 +228,7 @@ afc_col_1.image(AFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 nfl_col_2.image(NFL_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 nfc_col_3.image(NFC_logo, width=250) # caption='NATIONAL FOOTBALL LEAGUE'
 
-st.title('2022 FANTASY FOOTBALL DRAFT KIT')
+
 
 ## SECTOR TABS ##
 tab_0, tab_1, tab_2, tab_3, tab_4, tab_5, tab_6, tab_7, tab_8 = st.tabs(['NFL', 'OVERALL', 'QB', 'RB', 'WR', 'TE', 'K', 'IDP', 'DST'])
